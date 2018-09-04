@@ -1,0 +1,28 @@
+//prefix
+		p1[0]=1; p2[0]=1;
+		for(ll i=1;i<n;i++){
+			if(s1[i]!=s1[i-1])
+				p1[i]=p1[i-1]+1;
+			else
+				p1[i]=p1[i-1];
+		}
+		for(ll i=1;i<m;i++){
+			if(s2[i]!=s2[i-1])
+				p2[i]=p2[i-1]+1;
+			else
+				p2[i]=p2[i-1];
+		}
+		//suffix
+		sf1[n-1]=1; sf2[m-1]=1;
+		for(ll i=n-2;i>=0;i--){
+			if(s1[i]!=s1[i+1])
+				sf1[i]=sf1[i+1]+1;
+			else
+				sf1[i]=sf1[i+1];
+		}
+		for(ll i=m-2;i>=0;i--){
+			if(s2[i]!=s2[i+1])
+				sf2[i]=sf2[i+1]+1;
+			else
+				sf2[i]=sf2[i+1];
+		}
