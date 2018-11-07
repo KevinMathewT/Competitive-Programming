@@ -49,7 +49,7 @@ int main()
 	cin.tie(NULL);							//this.
 	cout.tie(0);							//or this.
 
-	ll size = 100;
+	ll size = 5 * 100000 + 100;
 	ll a[size], set[size];
 	a[0] = 0; a[1] = 0;
 	a[2] = 2; set[2]=1;

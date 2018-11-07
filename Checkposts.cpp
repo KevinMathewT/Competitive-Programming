@@ -3,110 +3,126 @@ using namespace std;
 typedef long long ll;
 
 // Author - Kevin Mathew
+// Birla Institute of Technology, Mesra
 
-const int size = (int) 1e5+10000;
+ll n, costs[(ll) 1e5+10], m;
+vector<ll> v[(ll) 1e5+10];
+vector<ll> scc[(ll) 1e5+10];
 stack<ll> s;
-vector<ll> graph[size];
-vector<ll> revGraph[size];
-ll vis[size];
-ll revVis[size];
-ll cost[size];
-ll min_val = 0, cou1nt = 1, tot = 1;
+ll dfs_num[(ll) 1e5+10], dfs_low[(ll) 1e5+10], vis[(ll) 1e5+10];
+ll z, counter;
 
-void dfs(ll n){
-	// cout << "POP HORA " << n << "\n";
-	vis[n] = 1;
-	for(ll i=0;i<graph[n].size();i++)
-		if(vis[graph[n][i]] !=  1)
-			dfs(graph[n][i]);
-	// cout << "PUSH HORA " << n << "\n";
-	s.push(n);
+void dfs(ll vert){
+	// cout << vert << "\n";
+	dfs_num[vert] = counter;
+	dfs_low[vert] = counter++;
+	s.push(vert);
+	vis[vert] = 1;
+
+	for(ll i=0;i<v[vert].size();i++){
+			// if(vert == 9)
+				// cout << dfs_num[v[vert][i]] << "-\n";
+		if(dfs_num[v[vert][i]] == -1){
+			dfs(v[vert][i]);
+		}
+		if(vis[v[vert][i]] == 1)
+			dfs_low[vert] = min(dfs_low[vert], dfs_low[v[vert][i]]);
+	}
+
+	if(dfs_num[vert] == dfs_low[vert]){
+		// cout << vert << ": ";
+		while(true){
+			ll u = s.top();
+			s.pop();
+			vis[u] = 0;
+			// cout << u << " ";
+
+			scc[vert].push_back(u);
+
+			if(u == vert)
+				break;
+		}
+		// cout << "\n";
+	}
 }
 
-void revDfs(ll n){
-	if(cost[n] == min_val) cou1nt++;
-	min_val = min(cost[n], min_val);
-	revVis[n] = 1;
-	for(ll i=0;i<revGraph[n].size();i++)
-		if(revVis[revGraph[n][i]] != 1)
-			revDfs(revGraph[n][i]);
-}
-
-void showstack(stack<ll> gq)
-{
-    stack <ll> g = gq;
-    while (!g.empty())
-    {
-        cout << g.top() << ' ';
-        g.pop();
-    }
-    cout << '\n';
+void memset(ll *a, int b, ll size){
+	for(ll i=0;i<size;i++)
+		a[i] = b;
 }
 
 void te(){
-	ll n; cin >> n;
-	for(ll i=1;i<=n;i++) cin >> cost[i];
-	ll m; cin >> m;
-	
-	for(ll i=0;i<m;i++){
-		ll u, v;
-		cin >> u >> v;
-		graph[u].push_back(v);
-		revGraph[v].push_back(u);
-	}
+	z = counter = 0;
+	cin >> n;
 
-	// cout << "////////////\n";
-
-	// for(ll i=1;i<=n;i++){
-	// 	for(ll j=0;j<graph[i].size();j++)
-	// 		cout << graph[i][j] << " ";
-	// 	cout << "\n";
-	// }
-
-	// cout << "////////////\n";
-
-	// for(ll i=1;i<=n;i++){
-	// 	for(ll j=0;j<revGraph[i].size();j++)
-	// 		cout << revGraph[i][j] << " ";
-	// 	cout << "\n";
-	// }
-
-	// cout << "////////////\n";
+	memset(costs, -1, n+10);
+	memset(dfs_num, -1, n+10);
+	memset(dfs_low, -1, n+10);
+	memset(vis, 0, n+10);
 
 	for(ll i=1;i<=n;i++)
-		if(vis[i] != 1)
-			dfs(i);
+		cin >> costs[i];
 
-	// showstack(s);
+	cin >> m;
 
-	ll firstAns = 0;
-	for(ll i=1;i<=n;i++){
-		// cout << s.top() << " " << revVis[s.top()] << "\n";
-		if(revVis[s.top()] != 1){
-			// cout << s.top() << "\n";
-			min_val = LLONG_MAX;
-			cou1nt = 1;
-			revDfs(s.top());
-			firstAns += min_val;
-			// cout << revVis[50] << "--\n";
-			// cout << firstAns << "-\n";
-			// cout << cou1nt << " is the count\n";
-			tot *= cou1nt;
-		}
-		s.pop();
+	for(ll i=0;i<m;i++){
+		ll a, b;
+		cin >> a >> b;
+
+		v[a].push_back(b);
 	}
 
-	cout << firstAns << " " << tot << "\n";
+	for(ll i=1;i<=n;i++){
+		// cout << dfs_num[i] << "\n";
+		if(dfs_num[i] == -1){
+			// cout << "HEY\n";
+			dfs(i);	
+		}
+	}
 
-	// ll tot = 0;
-	// for(ll i=0;i<v.size();i++){
-	// 	ll min_val = LLONG_MAX;
-	// 	for(ll j=0;j<v[i].size();j++)
-	// 		min_val = min(min_val, cost[v[i][j]]);
-	// 	tot += min_val;
+	ll tot = 0;
+	vector<ll> mul;
+	ll z = 0;
+
+	ll c = 0;
+
+	// for(ll i=0;i<=n;i++){
+	// 	if(scc[i].size() == 0)
+	// 		continue;
+	// 	c+=costs[i];
+	// 	for(ll j=0;j<scc[i].size();j++)
+	// 		cout << scc[i][j] << " ";
+	// 	cout << "\n";
 	// }
 
-	// cout << tot << "\n";
+	// cout << c << "\n";
+
+	for(ll i=0;i<=n;i++){
+		if(scc[i].size() == 0)
+			continue;
+
+		ll minimum = LLONG_MAX;
+		mul.push_back(0);
+
+		for(ll j=0;j<scc[i].size();j++){
+			minimum = min(minimum, costs[scc[i][j]]);
+		}
+
+		tot = tot + minimum;
+
+		for(ll j=0;j<scc[i].size();j++){
+			if(minimum == costs[scc[i][j]])
+				mul[z] = (mul[z] + 1) % ((ll) (1e9 + 7));
+		}
+
+		z++;
+	}
+
+	ll final = 1;
+	for(ll i=0;i<mul.size();i++)
+		final = (final * mul[i]) % ((ll) (1e9 + 7));
+
+	cout << tot << " " << final << "\n";
 }
 
 int main()
