@@ -6,11 +6,12 @@ typedef long long ll;
 // Birla Institute of Technology, Mesra
 
 void te(){
-	ll n;
-	cin >> n;
+	ll s = 0;
+	for(ll i=1;i<1000000;i++)	
+		s += (1000000 / i);
 
-	
-}	
+	cout << s << "\n";
+}
 
 int main()
 {
@@ -20,12 +21,7 @@ int main()
 	cin.tie(NULL);							//this.
 	cout.tie(0);							//or this.
 
-	// ll t = 100;
-	// cout << t << "\n";
-	// while(t--)
 	te();
-
-	// cout << "Hey\n";/
 
 	return 0;
 }

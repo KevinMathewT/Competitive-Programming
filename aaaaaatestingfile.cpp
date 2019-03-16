@@ -67,27 +67,24 @@ ll gcd(ll a, ll b)
 int main()
 {
 	freopen("input.txt", "r", stdin);		//Comment
-	freopen("input1.txt", "w", stdout);		//this
+	freopen("output.txt", "w", stdout);		//this
 	ios::sync_with_stdio(false);			//Not
 	cin.tie(NULL);							//this.
 	cout.tie(0);							//or this.
 
-	cout << 50000 << "\n";
+	ll a = 2, b = 1;
 
-	for(ll i=1;i<(50000/5);i++){
-		cout << "abcd\nabcc\nabb\nasdl\ndsad\n";
+	cout << 0 << " " << a << "\n";
+	cout << 1 << " " << b << "\n";
+
+	ll c = (a + b);
+
+	for(ll i=2;i<100;i++){
+		cout << i << " " << c % 10 << "\n";
+		a = b;
+		b = c;
+		c = (a + b);
 	}
 
-	cout << "abcd\nabcc\nabb\nasdl\nabcdex\n";
-
-	cout << 99999 << "\n";
-
-	for(ll i=0;i<99999/3;i++){
-		cout << "50000 a\n50000 aksjd\n50000 abcdex\n";
-	}
-	
-	end_clock();
-
-	cout << "Hey\n";
 	return 0;
 }

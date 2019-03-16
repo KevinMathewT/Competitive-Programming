@@ -13,15 +13,12 @@ ll dfs_num[(ll) 1e5+10], dfs_low[(ll) 1e5+10], vis[(ll) 1e5+10];
 ll z, counter;
 
 void dfs(ll vert){
-	// cout << vert << "\n";
 	dfs_num[vert] = counter;
 	dfs_low[vert] = counter++;
 	s.push(vert);
 	vis[vert] = 1;
 
 	for(ll i=0;i<v[vert].size();i++){
-			// if(vert == 9)
-				// cout << dfs_num[v[vert][i]] << "-\n";
 		if(dfs_num[v[vert][i]] == -1){
 			dfs(v[vert][i]);
 		}
@@ -30,19 +27,16 @@ void dfs(ll vert){
 	}
 
 	if(dfs_num[vert] == dfs_low[vert]){
-		// cout << vert << ": ";
 		while(true){
 			ll u = s.top();
 			s.pop();
 			vis[u] = 0;
-			// cout << u << " ";
 
 			scc[vert].push_back(u);
 
 			if(u == vert)
 				break;
 		}
-		// cout << "\n";
 	}
 }
 
@@ -73,9 +67,7 @@ void te(){
 	}
 
 	for(ll i=1;i<=n;i++){
-		// cout << dfs_num[i] << "\n";
 		if(dfs_num[i] == -1){
-			// cout << "HEY\n";
 			dfs(i);	
 		}
 	}
@@ -85,17 +77,6 @@ void te(){
 	ll z = 0;
 
 	ll c = 0;
-
-	// for(ll i=0;i<=n;i++){
-	// 	if(scc[i].size() == 0)
-	// 		continue;
-	// 	c+=costs[i];
-	// 	for(ll j=0;j<scc[i].size();j++)
-	// 		cout << scc[i][j] << " ";
-	// 	cout << "\n";
-	// }
-
-	// cout << c << "\n";
 
 	for(ll i=0;i<=n;i++){
 		if(scc[i].size() == 0)

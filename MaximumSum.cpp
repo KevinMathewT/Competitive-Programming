@@ -5,23 +5,24 @@ typedef long long ll;
 // Author - Kevin Mathew
 // Birla Institute of Technology, Mesra
 
+ll n;
+ll a[20][20];
+ll dp[20][20];
+
 void te(){
 	ll n;
 	cin >> n;
-	ll a[n];
-	for(ll i=0;i<n;i++) cin >> a[i];
 
-	ll dp[n];
-	dp[0] = a[0];
-	dp[1] = a[1];
+	for(ll i=0;i<n;i++)
+		for(ll j=0;j<n;j++)
+			cin >> a[i][j];
 
-	for(ll i=2;i<n;i++)
-		dp[i] = max(dp[i-1], a[i] + dp[i-2]);
-
-	if(n == 1)
-		cout << a[0] << "\n";
-	else
-		cout << max(dp[n-2], dp[n-1]) << "\n";
+	for(ll i=0;i<n;i++)
+		for(ll j=0;j<n;j++)
+			for(ll x=i-2;x<=i+2;x++)
+				for(ll y=j-2;y<=j+2;j++){
+					if(x < i && y < j || )
+				}
 }
 
 int main()
