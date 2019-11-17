@@ -72,18 +72,11 @@ int main()
 	cin.tie(NULL);							//this.
 	cout.tie(0);							//or this.
 
-	ll a = 2, b = 1;
-
-	cout << 0 << " " << a << "\n";
-	cout << 1 << " " << b << "\n";
-
-	ll c = (a + b);
-
-	for(ll i=2;i<100;i++){
-		cout << i << " " << c % 10 << "\n";
-		a = b;
-		b = c;
-		c = (a + b);
+	for(ll i=1;i<=100;i++){
+		cout << 100 << " ";
+		for(ll j=1;j<=100;j++)
+			cout << j << " ";
+		cout << "\n";
 	}
 
 	return 0;

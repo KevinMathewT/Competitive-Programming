@@ -83,9 +83,9 @@ void te(){
 
 int main()
 {
-	freopen("input.txt", "r", stdin);		//Comment
-	freopen("output.txt", "w", stdout);		//this
-	start_clock();							//out.
+	// freopen("input.txt", "r", stdin);		//Comment
+	// freopen("output.txt", "w", stdout);		//this
+	// start_clock();							//out.
 	ios::sync_with_stdio(false);			//Not
 	cin.tie(NULL);							//this.
 	cout.tie(0);							//or this.
@@ -94,6 +94,6 @@ int main()
 	read(T);
 	while(T--) te();
 
-	end_clock();							//This too.
+	// end_clock();							//This too.
 	return 0;
 }

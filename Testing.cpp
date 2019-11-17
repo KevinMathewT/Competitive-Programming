@@ -1,46 +1,41 @@
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
+typedef double ld;
 
-// Author - Kevin Mathew
+// Kevin Mathew T
 // Birla Institute of Technology, Mesra
+// GitHub - https://github.com/KevinMathewT
+// CodeForces - https://codeforces.com/profile/KevinMathew
+// CodeChef - https://www.codechef.com/users/KevinMathew
+// HackerRank - https://www.hackerrank.com/KevinMathew?
 
-ll getToSingle(ll n){
-	if(n < 10) return 0;
+ll fact(ll n){
 	ll c = 0;
-	ll sum = 0;
-	ll t = n;
-	while(true){
-		t = n;
-		sum = 0;
-		while(t > 0){
-			sum += t % 10;
-			t /= 10;
-		}
-		c++;
-		n = sum;
-		if(sum < 10) break;;
-	}
+	for(ll i=1;i<=n;i++)
+		if(n % i == 0)
+			c++;
+
 	return c;
 }
 
-void te(){
-	ll t = 0;
-	for(ll i=1;i<=200;i++)
-		t += (i*i) * ((ll)((200-i)/2) * 2 + 1);
-
-	cout << t << "\n";
+void solve(){
+	for(ll i=1;i<100;i++)
+		for(ll j=1;j<100;j++){
+			if((fact(i) * fact(j)) == fact(i * j))
+				cout << i << " " << j << " " << fact(i) << " " << fact(j) << " " << fact(i * j) << "\n";
+		}	
 }
 
 int main()
 {
-	freopen("input.txt", "r", stdin);		//Comment
+	freopen("input.txt", "r", stdin);		//Comment[-]
 	freopen("output.txt", "w", stdout);		//this out.
 	ios::sync_with_stdio(false);			//Not
 	cin.tie(NULL);							//this.
 	cout.tie(0);							//or this.
 
-	te();
+	solve();
 
 	return 0;
 }
