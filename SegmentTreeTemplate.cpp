@@ -36,21 +36,23 @@ const ll N = 1000010;
 ll arr[N];
 
 struct segment {
-    ll _presum, _sufsum, _totalsum, _maxsum;
+    ll 
 
     void mergee(segment left, segment right) {
-        _presum = max(left._presum, left._totalsum + right._presum);
-        _sufsum = max(right._sufsum, right._totalsum + left._sufsum);
-        _totalsum = left._totalsum + right._totalsum;
-        _maxsum = max(_presum, max(_sufsum, max(left._maxsum, max(right._maxsum, left._sufsum + right._presum))));
+
     }
+
+    void init(){
+
+    }
+
 } seg[4 * N];
 
 void build(ll low, ll high, ll node) {
     if (low > high)
         return;
     if (low == high) {
-        seg[node]._presum = seg[node]._sufsum = seg[node]._totalsum = seg[node]._maxsum = arr[low];
+        seg[node] = arr[low];
         return;
     }
 
@@ -62,7 +64,7 @@ void build(ll low, ll high, ll node) {
 
 segment query(ll low, ll high, ll lq, ll hq, ll node) {
     segment ans;
-    ans._presum = ans._sufsum = ans._totalsum = ans._maxsum = INT_MIN;
+    ans.init();
 
     if (low > high || low > hq || high < lq)
         return ans;
@@ -77,6 +79,12 @@ segment query(ll low, ll high, ll lq, ll hq, ll node) {
 
     ans.mergee(query(low, mid, lq, hq, 2 * node + 1), query(mid + 1, high, lq, hq, 2 * node + 2));
     return ans;
+}
+
+void update(ll low, ll high, ll lq, ll hq, ll node, ll p, ll v){
+    if(low == high){
+        seg[node] = 
+    }
 }
 
 void solve(){

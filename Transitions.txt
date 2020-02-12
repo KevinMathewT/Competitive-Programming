@@ -1,0 +1,31 @@
+Akash has an array of size $N$. Akash gets really triggered whenever he sees arrays with too many transitions, so he wants to rearrange the array so that the number of transitions becomes minimum possible.
+
+The number of transitions of an array is the number of indices such that when you move to the adjacent index (towards the right), the value at the new index is different from the value at the previous index. For example the number of transitions for $[1, 1, 2, 4]$ is $2$ as there are only $2$ transition positions (indices $2$ and $3$).
+
+###Input:
+
+- First line consists of a number $N$ denoting the number of elements in the array.
+- The second line consists of $N$ space-seperated integers.
+
+###Output:
+
+Print a single number denoting the minimum number of transitions in the array.
+
+###Constraints:
+
+- $1 \leq N \leq 10 ^ 5$
+- $1 \leq A[i] \leq 10 ^ 9$
+
+###Sample Input:
+
+4
+1 2 1 4
+
+###Sample Output:
+
+2
+
+###Explanation:
+
+The array currently is : $[1, 2, 1, 4]$ which has $3$ transitions.
+But is the array is modified to $[1, 1, 2, 4]$ then the number of transitions may be reduced to $2$.

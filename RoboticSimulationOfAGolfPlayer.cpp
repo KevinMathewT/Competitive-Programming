@@ -53,7 +53,12 @@ void solve(){
 
 	cin >> m;
 	while(m--){
+		ll x;
+		cin >> x;
 
+		ll pos = upper_bound(a, a + n, x) - a;
+		if(pos == )
+		if(a[pos-1])
 	}
 }
 

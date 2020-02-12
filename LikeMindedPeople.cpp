@@ -32,7 +32,7 @@ template<class L, class R> ostream& operator<<(ostream &os, map<L,R> M) {
 // CodeChef - https://www.codechef.com/users/KevinMathew
 // HackerRank - https://www.hackerrank.com/KevinMathew?
 
-ll n, dp[5010][5010], a[5010][5010], sums[5010];
+ll n, dp[5010][5010], a[5010][5010], sums[5010], dp1[5010][5010];
 
 void solve(){
 	ll tot = 0;
@@ -42,8 +42,10 @@ void solve(){
 			cin >> a[i][j];
 
 	for(ll i=0;i<=n;i++)
-		for(ll j=0;j<=n;j++)
+		for(ll j=0;j<=n;j++){
 			dp[i][j] = 0;
+			dp1[i][j] = -1;
+		}
 
 	for(ll i=1;i<=n;i++)
 		for(ll j=1;j<=n;j++)
@@ -54,20 +56,23 @@ void solve(){
 			if(a[i][j] != 1)
 				continue;
 
-			ll l = 0, r = min(n - i, n - j), best = 0;
+			if(dp1[i][j] == -1){
+				ll l = 0, r = min(n - i, n - j), best = 0;
 
-			while(l <= r){
-				ll mid = (l + r) / 2;
-				if((dp[i + mid][j + mid] - dp[i - 1][j + mid] - dp[i + mid][j - 1] + dp[i - 1][j - 1]) == pow(mid + 1, 2)){
-					best = mid;
-					l = mid + 1;
+				while(l <= r){
+					ll mid = (l + r) / 2;
+					if((dp[i + mid][j + mid] - dp[i - 1][j + mid] - dp[i + mid][j - 1] + dp[i - 1][j - 1]) == pow(mid + 1, 2)){
+						best = mid;
+						l = mid + 1;
+					}
+					else
+						r = mid - 1;
 				}
-				else
-					r = mid - 1;
+
+				dp1[i][j] = best;
 			}
 
-
-			tot += best + 1;
+			tot += dp1[i][j] + 1;
 		}
 
 	cout << tot << "\n";

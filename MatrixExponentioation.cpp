@@ -32,8 +32,6 @@ template<class L, class R> ostream& operator<<(ostream &os, map<L,R> M) {
 
 ll a, b, c, d, e, n, M, s;
 vector<vector<ll>> id;
-
-
 vector<vector<ll>> matmul(vector<vector<ll>> a, vector<vector<ll>> b){
 	vector<vector<ll>> ret(a.size(), vector<ll>(b[0].size(), 0));
 	for(ll i=0;i<a.size();i++)
@@ -43,7 +41,6 @@ vector<vector<ll>> matmul(vector<vector<ll>> a, vector<vector<ll>> b){
 
 	return ret;
 }
-
 vector<vector<ll>> matrix_expo(vector<vector<ll>> a, ll p){
 	if(p == 0)
 		return id;
@@ -53,7 +50,6 @@ vector<vector<ll>> matrix_expo(vector<vector<ll>> a, ll p){
 		return matrix_expo(matmul(a, a), p / 2);
 	return matmul(a, matrix_expo(matmul(a, a), p / 2));
 }
-
 void solve(){
 	s = 5;
 	M = 1e9 + 7;

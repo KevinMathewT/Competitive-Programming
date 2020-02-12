@@ -1,69 +1,91 @@
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
+typedef double ld;
+#define F first
+#define S second
 
-// Author - Kevin Mathew
-// Birla Institute of Technology, Mesra
-
-ll returnCost(ll a, ll b, ll c){
-	if(a <= c) return c - a;
-	return b + c - a;
+template<class T> ostream& operator<<(ostream &os, vector<T> V) {
+    os << "[ ";
+    for(auto v : V) os << v << " ";
+    os << "]";
+	return os;
+}
+template<class T> ostream& operator<<(ostream &os, set<T> S){
+    os << "{ ";
+    for(auto s:S) os<<s<<" ";
+    return os<<"}";
+}
+template<class L, class R> ostream& operator<<(ostream &os, pair<L,R> P) {
+    return os << "(" << P.first << "," << P.second << ")";
+}
+template<class L, class R> ostream& operator<<(ostream &os, map<L,R> M) {
+    os << "{ ";
+    for(auto m:M) os<<"("<<m.F<<":"<<m.S<<") ";
+    return os<<"}";
 }
 
-void te(){
-	ll n;
-	cin >> n;
-	ll a[n], b[n];
+// Kevin Mathew T
+// Birla Institute of Technology, Mesra
+// GitHub - https://github.com/KevinMathewT
+// CodeForces - https://codeforces.com/profile/KevinMathew
+// CodeChef - https://www.codechef.com/users/KevinMathew
+// HackerRank - https://www.hackerrank.com/KevinMathew?
 
-	for(ll i=0;i<n;i++)
-		cin >> a[i];
+ll n, m;
+vector<ll> a, b;
 
-	for(ll i=0;i<n;i++)
-		cin >> b[i];
+ll match(vector<ll> &c, vector<ll> &d){
+	// cout << c << ' ' << d << "\n";
+	sort(c.begin(), c.end());
+	sort(d.begin(), d.end());
 
-	for(ll i=0;i<n;i++)
-		a[i] = a[i] % b[i];
+	ll x = d[0] - c[0];
+	if(x < 0) return -1;
 
-	ll l = 0, h = 1e9 + 100, mid, mid_cost;	
-	h-=1;
+	for(ll i=0;i<n;i++) if(d[i] != c[i] + x) return -1;
 
-	// cout << h << "\n";
-	ll min_cost = LLONG_MAX;
+	return x;
+}
 
-	while(l <= h){
-		mid = (l + h) / 2;
-		ll cost_1 = 0;
-		ll cost_2 = 0;
 
-		for(ll i=0;i<n;i++)
-			cost_1 += returnCost(a[i], b[i], mid);
-		for(ll i=0;i<n;i++)
-			cost_2 += returnCost(a[i], b[i], mid+1);
+void solve(){
+	cin >> n >> m;
 
-		min_cost = min(min(min_cost, cost_1), cost_2);
+	a = vector<ll>(n, 0);
+	b = vector<ll>(n, 0);
 
-		if(cost_1 < cost_2)
-			h = mid - 1;
-		else
-			l = mid + 1;
-		// cout << mid << " " << cost_1 << " " << cost_2 << "\n";
+	// swap(a, b)
+
+	for(ll i=0;i<n;i++) cin >> a[i];
+	for(ll i=0;i<n;i++) cin >> b[i];
+
+	ll l = n - 1;
+	ll x = 0;
+	while(true){
+		if(match(a, b) != -1){
+			x += match(a, b); 
+			break;
+		}
+
+		x += m - a[n - 1];
+		ll d = m - a[n - 1];
+
+		for(ll i=0;i<n;i++) a[i] = (a[i] + d) % m;
 	}
 
-	cout << min_cost << "\n";
+	cout << (((x % m) + m) % m) << "\n";
 }
 
 int main()
 {
-	freopen("input.txt", "r", stdin);		//Comment
-	freopen("output.txt", "w", stdout);		//this out.
+	// freopen("input.txt", "r", stdin);		//Comment
+	// freopen("output.txt", "w", stdout);		//this out.
 	ios::sync_with_stdio(false);			//Not
 	cin.tie(NULL);							//this.
 	cout.tie(0);							//or this.
 
-	ll T;
-	cin >> T;
-	while(T--)
-		te();
+	solve();
 
 	return 0;
 }
