@@ -2,127 +2,105 @@
 using namespace std;
 typedef long long ll;
 typedef double ld;
+#define F first
+#define S second
+#define fi(a, b) for(ll i=(a);i<=b;i++)
+#define fj(a, b) for(ll j=(a);j<=b;j++)
+#define fid(a, b) for(ll i=(a);i>=b;i--)
+#define fjd(a, b) for(ll i=(a);i>=b;j--)
+
+template<class T> ostream& operator<<(ostream &os, vector<T> V) {
+    os << "[ ";
+    for(auto v : V) os << v << " ";
+    os << "]";
+	return os;
+}
+template<class T> ostream& operator<<(ostream &os, set<T> S){
+    os << "{ ";
+    for(auto s:S) os<<s<<" ";
+    return os<<"}";
+}
+template<class T> ostream& operator<<(ostream &os, multiset<T> S){
+    os << "{ ";
+    for(auto s:S) os<<s<<" ";
+    return os<<"}";
+}
+template<class L, class R> ostream& operator<<(ostream &os, pair<L,R> P) {
+    return os << "(" << P.first << "," << P.second << ")";
+}
+template<class L, class R> ostream& operator<<(ostream &os, map<L,R> M) {
+    os << "{ ";
+    for(auto m:M) os<<"("<<m.F<<":"<<m.S<<") ";
+    return os<<"}";
+}
+template<class L, class R> ostream& operator<<(ostream &os, unordered_map<L,R> M) {
+    os << "{ ";
+    for(auto m:M) os<<"("<<m.F<<":"<<m.S<<") ";
+    return os<<"}";
+}
 
 // Kevin Mathew T
 // Birla Institute of Technology, Mesra
+// LinkedIn - https://www.linkedin.com/in/KevinMathewT/
 // GitHub - https://github.com/KevinMathewT
 // CodeForces - https://codeforces.com/profile/KevinMathew
 // CodeChef - https://www.codechef.com/users/KevinMathew
-// HackerRank - https://www.hackerrank.com/KevinMathew?
+// HackerRank - https://www.hackerrank.com/KevinMathew
 
-struct Node{
-	int val;
-	Node *next;
-};
+const ll N = 1, M = 1e9 + 7;
+ll n;
 
-void push(Node **ref, int x){
-	Node *new_node = (Node *) malloc(sizeof(Node));
-	new_node->val = x;
-	new_node->next = *(ref);
-	*ref = new_node;
+vector<ll> prefix_function(string s) {
+    ll n = (ll)s.length();
+    vector<ll> pi(n);
+    for (ll i = 1; i < n; i++) {
+        ll j = pi[i-1];
+        while (j > 0 && s[i] != s[j])
+            j = pi[j-1];
+        if (s[i] == s[j])
+            j++;
+        pi[i] = j;
+    }
+    return pi;
 }
-
-void append(Node **ref, int x){
-	Node *new_node = (Node *) malloc(sizeof(Node));
-	new_node->val = x;
-	new_node->next = NULL;
-
-	Node *copy = *ref;
-
-	if(copy == NULL){
-		*ref = new_node;
-	}
-	else{
-		while(copy->next != NULL)
-			copy = copy->next;
-		copy->next = new_node;
-	}
-}
-
-void print(Node *head){
-	if(head == NULL)
-		return;
-	while(head != NULL){
-		cout << head->val << " ";
-		head = head->next;
-	}
-	cout << "\n";
-}
-
-void insertAfter(Node **prev, int x){
-	Node *new_node = (Node *) malloc(sizeof(Node));
-	new_node->val = x;
-	new_node->next = (*prev)->next;
-	(*prev)->next = new_node;
-}
-
-// void delete(Node **ref, int x){
-
-// }
 
 void solve(){
-	// Node *head = NULL;
+	// string s = "abbababbaaa";
+	// n = s.size();
+	// vector<ll> pi = prefix_function(s);
+	// cout << pi << "\n";
+	// vector<ll> ans(n + 1);
+	// cout << ans << "\n";
 
-	// append(&head, 1);
-	// print(head);
-	// append(&head, 2);
-	// print(head);
-	// append(&head, 3);
-	// print(head);
-	// push(&head, 4);
-	// print(head);
-	// push(&head, 5);
-	// print(head);
-	// push(&head, 6);
-	// print(head);
-	// insertAfter(&(head->next), 7);
-	// print(head);
-	// insertAfter(&(head->next), 8);
-	// print(head);
+	// for (ll i = 0; i < n; i++)
+	//     ans[pi[i]]++;
+	// cout << ans << "\n";
 
-	// int a, *b, *c;
+	// for (ll i = n-1; i > 0; i--)
+	//     ans[pi[i-1]] += ans[i];
+	// cout << ans << "\n";
 
-	// a = 2;
-	// b = &a;
-	// c = (int *) malloc(sizeof(int));
-	// *c = *b;
+	// for (ll i = 0; i <= n; i++)
+	//     ans[i]++;
+	// cout << ans << "\n";
 
-	// cout << a << " " << *b << " " << *c << "\n";
-
-	// a = 5;
-
-	// cout << a << " " << *b << " " << *c << "\n";
-
-	// int a = 7;
-	// int *p = &a;
-	// cout << *p << "\n";
-	// free(p);
-	// a = 8;
-	// cout << *p << "\n";
-
-	int *a = (int *) malloc(10 * sizeof(int));
-	a[0] = 0;
-	a[1] = 1;
-	a[2] = 2;
-	a[3] = 3;
-
-	cout << a[2] << "\n";
-
-	realloc(a, 20 * sizeof(int));
-
-	a[19] = 19;
-	cout << a[19] << "\n";
+    ll v[] = { 1, 7, 8, 9, 5 };
+    nth_element(v, v, v + 5);
+    fi(0, 4) cout << v[i] << ' ';
+    cout << "\n";
 }
 
-int main()
-{
+int main(){
 	freopen("input.txt", "r", stdin);		//Comment
 	freopen("output.txt", "w", stdout);		//this out.
 	ios::sync_with_stdio(false);			//Not
 	cin.tie(NULL);							//this.
 	cout.tie(0);							//or this.
 
-	solve();
+	// ll T;
+	// cin >> T;
+	// while(T--)
+		solve();
 
 	return 0;
 }

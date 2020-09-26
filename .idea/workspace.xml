@@ -1,143 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="858d1bfd-26a7-4781-a6b2-bc82304f547c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/MrX.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/C++14.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/win10.xml" beforeDir="false" />
+    <list default="true" id="63a46b96-297f-4464-9f0e-263ed7e199f8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/untitled104.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chewing.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Chewing.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chewing.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Chewing.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PointersInC.exe" beforeDir="false" afterPath="$PROJECT_DIR$/PointersInC.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedGreenTowers.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/RedGreenTowers.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SandeepAndPUBG.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SandeepAndPUBG.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Snippet.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Snippet.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testing.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Testing.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCoinChangeProblem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TheCoinChangeProblem.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCoinChangeProblem.exe" beforeDir="false" afterPath="$PROJECT_DIR$/TheCoinChangeProblem.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Variation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Variation.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Variation.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Variation.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aaaaaatestingfile.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/aaaaaatestingfile.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aaaaaatestingfile.exe" beforeDir="false" afterPath="$PROJECT_DIR$/aaaaaatestingfile.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/A.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A.exe" beforeDir="false" afterPath="$PROJECT_DIR$/A.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C++14.iml" beforeDir="false" afterPath="$PROJECT_DIR$/C++14.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Checkposts.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Checkposts.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Checkposts.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Checkposts.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Play.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Play.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Play.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Play.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TableDecorations.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TableDecorations.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TableDecorations.exe" beforeDir="false" afterPath="$PROJECT_DIR$/TableDecorations.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Template.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.exe" beforeDir="false" afterPath="$PROJECT_DIR$/test.exe" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MrX.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/MrX.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/MrX.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="85" />
-    <option name="y" value="25" />
-    <option name="width" value="1750" />
-    <option name="height" value="980" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="C++14" type="b2602c69:ProjectViewProjectNode" />
-              <item name="C++14" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="C++14" type="b2602c69:ProjectViewProjectNode" />
-              <item name="C++14" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-    </panes>
+  <component name="ProjectId" id="1bI8LxoIY0do7eoknQvzSJsvgVB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager">
-    <configuration name="MrX" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="C++14" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\win10\AppData\Local\Continuum\anaconda3\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/MrX.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
+  <component name="RunManager" selected="Application.BringingAGunToAGuardFightAgain">
+    <configuration name="BringingAGunToAGuardFight" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BringingAGunToAGuardFight" />
+      <module name="untitled104" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
+    <configuration name="BringingAGunToAGuardFightAgain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BringingAGunToAGuardFightAgain" />
+      <module name="untitled104" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BringingGunToAGuardFightAThirdTime" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.BringingGunToAGuardFightAThirdTime" />
+      <module name="untitled104" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DistractTheGuards" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DistractTheGuards" />
+      <module name="untitled104" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FuelInjectionPerfection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FuelInjectionPerfection" />
+      <module name="untitled104" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.BringingAGunToAGuardFightAgain" />
+      <item itemvalue="Application.BringingAGunToAGuardFight" />
+      <item itemvalue="Application.BringingGunToAGuardFightAThirdTime" />
+      <item itemvalue="Application.DistractTheGuards" />
+      <item itemvalue="Application.FuelInjectionPerfection" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.MrX" />
+        <item itemvalue="Application.BringingAGunToAGuardFightAgain" />
+        <item itemvalue="Application.BringingAGunToAGuardFight" />
+        <item itemvalue="Application.BringingGunToAGuardFightAThirdTime" />
+        <item itemvalue="Application.DistractTheGuards" />
+        <item itemvalue="Application.FuelInjectionPerfection" />
       </list>
     </recent_temporary>
   </component>
@@ -146,64 +135,74 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="858d1bfd-26a7-4781-a6b2-bc82304f547c" name="Default Changelist" comment="" />
-      <created>1559238209197</created>
+      <changelist id="63a46b96-297f-4464-9f0e-263ed7e199f8" name="Default Changelist" comment="" />
+      <created>1588308194845</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1559238209197</updated>
+      <updated>1588308194845</updated>
     </task>
     <servers />
   </component>
-  <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25637585" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="R Packages" order="3" />
-      <window_info anchor="right" id="R Graphics" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32905984" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info id="Designer" order="2" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info anchor="bottom" id="Find" order="1" />
-    </layout>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/MrX.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MrX.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
+  <component name="WindowStateProjectService">
+    <state x="464" y="32" key="#DoomsdayFuel" timestamp="1588400906816">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="464" y="32" key="#DoomsdayFuel/0.0.1536.824@0.0.1536.824" timestamp="1588400906816" />
+    <state x="249" y="0" key="#Project_Structure" timestamp="1588309288475">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1588309288475" />
+    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1588496293285">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1588496293285" />
+    <state x="549" y="130" key="FileChooserDialogImpl" timestamp="1589555031202">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="130" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1589555031202" />
+    <state width="1493" height="201" key="GridCell.Tab.0.bottom" timestamp="1588625086158">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="201" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588625086158" />
+    <state width="1493" height="201" key="GridCell.Tab.0.center" timestamp="1588625086158">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="201" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588625086158" />
+    <state width="1493" height="201" key="GridCell.Tab.0.left" timestamp="1588625086158">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="201" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588625086158" />
+    <state width="1493" height="201" key="GridCell.Tab.0.right" timestamp="1588625086158">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="201" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588625086158" />
+    <state x="439" y="117" key="NewModule_or_Project.wizard" timestamp="1589555055622">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="439" y="117" key="NewModule_or_Project.wizard/0.0.1536.824@0.0.1536.824" timestamp="1589555055622" />
+    <state x="372" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1588420033101">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="372" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1588420033101" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1588487375875">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1588487375875" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1588488469854">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1588488469854" />
   </component>
 </project>

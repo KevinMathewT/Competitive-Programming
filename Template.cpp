@@ -1807,3 +1807,15 @@ using namespace __gnu_pbds;
 // Let us assume we have a set s : {1, 5, 6, 17, 88}, then :
 // s.order_of_key(6) : Count of elements strictly smaller than 6 is 2.
 // s.order_of_key(25) : Count of elements strictly smaller than 25 is 4.
+
+// Euler Path and Circuit :
+// Path : Path which visits all edges exactly once.
+// Circuit : Euler Path which starts and ends at the same vertex.
+//                Circut                  |       Path    
+// Undirected:   Every vertex             |  Either all have even
+//               must have even degree    |  or two have odd degree
+//            ----------------------------+-----------------------------
+// Directed:     Every vertex must have   |  At most one vertex has
+//               equal in and out degree  |  in - out = 1 and one has
+//                                        |  out - in = 1 and rest 
+//                                        |  have same in and out

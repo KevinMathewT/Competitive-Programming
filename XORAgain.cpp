@@ -1,71 +1,101 @@
+// Kevin Mathew T
+// Birla Institute of Technology, Mesra
+// LinkedIn - https://www.linkedin.com/in/KevinMathewT/
+// GitHub - https://github.com/KevinMathewT
+// CodeForces - https://codeforces.com/profile/KevinMathew
+// CodeChef - https://www.codechef.com/users/KevinMathew
+// HackerRank - https://www.hackerrank.com/KevinMathew
+
 #include <bits/stdc++.h>
-#include <iostream>
-#include <vector>
-#include <string>
-#include <algorithm>
-
 using namespace std;
-
 typedef long long ll;
-typedef long double ld;
-typedef vector<ll> vl;
-typedef vector<vl> vvl;
+typedef double ld;
+#define F first
+#define S second
+#define fi(a, b) for(ll i=(a);i<=b;i++)
+#define fj(a, b) for(ll j=(a);j<=b;j++)
+#define fid(a, b) for(ll i=(a);i>=b;i--)
+#define fjd(a, b) for(ll j=(a);j>=b;j--)
 
-#define F0(i,n) for (ll i = 0; i < n; i++)
-#define F1(i,n) for (ll i = 1; i <= n; i++)
-#define CL(a,x) memset(x, a, sizeof(x));
-#define SZ(x) ((int)x.size())
+// #include <ext/pb_ds/assoc_container.hpp> // Common file 
+// #include <ext/pb_ds/tree_policy.hpp> 
+// #include <functional> // for less 
+// #include <iostream> 
+// using namespace __gnu_pbds; 
+// using namespace std; 
+// typedef tree<ll, null_type, less<ll>, rb_tree_tag, tree_order_statistics_node_update> ordered_set;
+// find_by_order(k) : Value at kth index in sorted array. 
+// order_of_key(k) : Index of the value k.
 
-void read(ll &x){
-	cin >> x;
+template<class T> ostream& operator<<(ostream &os, vector<T> V) {
+    os << "[ ";
+    for(auto v : V) os << v << " ";
+    os << "]";
+	return os;
 }
-void read(ll &x,ll &y){
-	cin >> x >> y;
+template<class T> ostream& operator<<(ostream &os, set<T> S){
+    os << "{ ";
+    for(auto s:S) os<<s<<" ";
+    return os<<"}";
 }
-void read(ll &x,ll &y,ll &z){
-	cin >> x >> y >> z;
+template<class T> ostream& operator<<(ostream &os, multiset<T> S){
+    os << "{ ";
+    for(auto s:S) os<<s<<" ";
+    return os<<"}";
 }
-void read(ll &x,ll &y,ll &z,ll &w){
-	cin >> x >> y >> z >> w;
+template<class L, class R> ostream& operator<<(ostream &os, pair<L,R> P) {
+    return os << "(" << P.first << "," << P.second << ")";
 }
-clock_t t_start,t_end;
-void start_clock(){
-	t_start = clock();
+template<class L, class R> ostream& operator<<(ostream &os, map<L,R> M) {
+    os << "{ ";
+    for(auto m:M) os<<"("<<m.F<<":"<<m.S<<") ";
+    return os<<"}";
 }
-void end_clock(){
-	t_end = clock();
-	ld timeis = t_end - t_start;
-    printf("\n\nTime taken : %f s", ((float)timeis)/CLOCKS_PER_SEC);
-}
-
-bool IsOdd(ll n){ return n % 2 == 1; }
-
-void te(){
-	ll n; read(n);
-	ll a[n]; for(ll i=0;i<n;i++) read(a[i]);
-	// for(ll i=0;i<n;i++) cout << a[i] << "\n";
-
-	ll XOR = 2*a[0];
-
-	for(ll i=1;i<n;i++)
-		XOR = XOR ^ (2*a[i]);
-
-	cout << XOR << "\n";
+template<class L, class R> ostream& operator<<(ostream &os, unordered_map<L,R> M) {
+    os << "{ ";
+    for(auto m:M) os<<"("<<m.F<<":"<<m.S<<") ";
+    return os<<"}";
 }
 
-int main()
-{
+
+const ll N = 1, M = 1e9 + 7;
+ll l, r;
+
+ll getVal(ll x) {
+	if (x == 0) return 0;
+	ll p = 2, c = 0;
+
+	while (true) {
+		ll lim = p * (x / p);
+		while ((lim + (p / 2)) > x) lim -= p;
+		lim /= p;
+
+		if (lim == 0) break;
+
+		c = (c + ((p * (((((lim) * (lim + 1))) / 2)))));
+		p *= 2;
+	}
+
+	c = (c + -((ll) log2l(x)) - 1);
+	return c;
+}
+
+void solve(){
+	cin >> l >> r;
+	cout << (getVal(r) - getVal(l - 1)) << "\n";
+}
+
+int main(){
 	freopen("input.txt", "r", stdin);		//Comment
-	freopen("output.txt", "w", stdout);		//this
-	start_clock();							//out.
+	freopen("output.txt", "w", stdout);		//this out.
 	ios::sync_with_stdio(false);			//Not
 	cin.tie(NULL);							//this.
 	cout.tie(0);							//or this.
 
 	ll T;
-	read(T);
-	while(T--) te();
+	cin >> T;
+	while(T--)
+		solve();
 
-	end_clock();							//This too.
 	return 0;
 }

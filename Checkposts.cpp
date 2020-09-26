@@ -1,120 +1,125 @@
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
+typedef double ld;
+#define F first
+#define S second
+#define fi(a, b) for(ll i=(a);i<=b;i++)
+#define fj(a, b) for(ll j=(a);j<=b;j++)
+#define fid(a, b) for(ll i=(a);i>=b;i--)
+#define fjd(a, b) for(ll i=(a);i>=b;j--)
 
-// Author - Kevin Mathew
+template<class T> ostream& operator<<(ostream &os, vector<T> V) {
+    os << "[ ";
+    for(auto v : V) os << v << " ";
+    os << "]";
+	return os;
+}
+template<class T> ostream& operator<<(ostream &os, set<T> S){
+    os << "{ ";
+    for(auto s:S) os<<s<<" ";
+    return os<<"}";
+}
+template<class T> ostream& operator<<(ostream &os, multiset<T> S){
+    os << "{ ";
+    for(auto s:S) os<<s<<" ";
+    return os<<"}";
+}
+template<class L, class R> ostream& operator<<(ostream &os, pair<L,R> P) {
+    return os << "(" << P.first << "," << P.second << ")";
+}
+template<class L, class R> ostream& operator<<(ostream &os, map<L,R> M) {
+    os << "{ ";
+    for(auto m:M) os<<"("<<m.F<<":"<<m.S<<") ";
+    return os<<"}";
+}
+template<class L, class R> ostream& operator<<(ostream &os, unordered_map<L,R> M) {
+    os << "{ ";
+    for(auto m:M) os<<"("<<m.F<<":"<<m.S<<") ";
+    return os<<"}";
+}
+
+// Kevin Mathew T
 // Birla Institute of Technology, Mesra
+// LinkedIn - https://www.linkedin.com/in/KevinMathewT/
+// GitHub - https://github.com/KevinMathewT
+// CodeForces - https://codeforces.com/profile/KevinMathew
+// CodeChef - https://www.codechef.com/users/KevinMathew
+// HackerRank - https://www.hackerrank.com/KevinMathew
 
-ll n, costs[(ll) 1e5+10], m;
-vector<ll> v[(ll) 1e5+10];
-vector<ll> scc[(ll) 1e5+10];
-stack<ll> s;
-ll dfs_num[(ll) 1e5+10], dfs_low[(ll) 1e5+10], vis[(ll) 1e5+10];
-ll z, counter;
+const ll N = 100010, M = 1e9 + 7;
+ll n, m, c[N], v[N];
+vector<ll> G[N], GR[N], s;
 
-void dfs(ll vert){
-	dfs_num[vert] = counter;
-	dfs_low[vert] = counter++;
-	s.push(vert);
-	vis[vert] = 1;
-
-	for(ll i=0;i<v[vert].size();i++){
-		if(dfs_num[v[vert][i]] == -1){
-			dfs(v[vert][i]);
-		}
-		if(vis[v[vert][i]] == 1)
-			dfs_low[vert] = min(dfs_low[vert], dfs_low[v[vert][i]]);
-	}
-
-	if(dfs_num[vert] == dfs_low[vert]){
-		while(true){
-			ll u = s.top();
-			s.pop();
-			vis[u] = 0;
-
-			scc[vert].push_back(u);
-
-			if(u == vert)
-				break;
-		}
-	}
+ll dfs(ll u) {
+	v[u] = 1;
+	for(ll t : G[u]) 
+		if(v[t] == 0)
+			dfs(t);
+	s.push_back(u);
 }
 
-void memset(ll *a, int b, ll size){
-	for(ll i=0;i<size;i++)
-		a[i] = b;
+ll dfs1(ll u, vector<ll> &vec) {
+	vec.push_back(u);
+	v[u] = 1;
+	for(ll t : GR[u])
+		if(v[t] == 0)
+			dfs1(t, vec);
 }
 
-void te(){
-	z = counter = 0;
+void solve(){
 	cin >> n;
-
-	memset(costs, -1, n+10);
-	memset(dfs_num, -1, n+10);
-	memset(dfs_low, -1, n+10);
-	memset(vis, 0, n+10);
-
-	for(ll i=1;i<=n;i++)
-		cin >> costs[i];
-
+	fi(1, n) cin >> c[i];
 	cin >> m;
-
-	for(ll i=0;i<m;i++){
-		ll a, b;
-		cin >> a >> b;
-
-		v[a].push_back(b);
+	fi(1, m) {
+		ll u, v; cin >> u >> v;
+		G[u].push_back(v);
+		GR[v].push_back(u);
 	}
 
-	for(ll i=1;i<=n;i++){
-		if(dfs_num[i] == -1){
-			dfs(i);	
+	fill(v, v + n + 1, 0LL);
+
+	fi(1, n) if(v[i] == 0) dfs(i);
+
+	// cout << s << "\n";
+
+	reverse(s.begin(), s.end());
+	vector<vector<ll> > vv;
+	fill(v, v + n + 1, 0LL);
+
+	fi(0, n - 1) 
+		if(v[s[i]] == 0) {
+			vv.push_back(vector<ll>(0));
+			dfs1(s[i], vv.back());
 		}
+
+	// cout << s << "\n";
+	// cout << vv << '\n';
+
+	ll tot = 0, p = 1;
+	fi(0, vv.size() - 1) {
+		ll mn = LLONG_MAX, pp = 0;
+		fj(0, vv[i].size() - 1) mn = min(mn, c[vv[i][j]]);
+		fj(0, vv[i].size() - 1) if(c[vv[i][j]] == mn) pp= (pp + 1) % M;
+
+		tot += mn;
+		p = (p * pp) % M;
 	}
 
-	ll tot = 0;
-	vector<ll> mul;
-	ll z = 0;
-
-	ll c = 0;
-
-	for(ll i=0;i<=n;i++){
-		if(scc[i].size() == 0)
-			continue;
-
-		ll minimum = LLONG_MAX;
-		mul.push_back(0);
-
-		for(ll j=0;j<scc[i].size();j++){
-			minimum = min(minimum, costs[scc[i][j]]);
-		}
-
-		tot = tot + minimum;
-
-		for(ll j=0;j<scc[i].size();j++){
-			if(minimum == costs[scc[i][j]])
-				mul[z] = (mul[z] + 1) % ((ll) (1e9 + 7));
-		}
-
-		z++;
-	}
-
-	ll final = 1;
-	for(ll i=0;i<mul.size();i++)
-		final = (final * mul[i]) % ((ll) (1e9 + 7));
-
-	cout << tot << " " << final << "\n";
+	cout << tot << ' ' << p << "\n";
 }
 
-int main()
-{
+int main(){
 	// freopen("input.txt", "r", stdin);		//Comment
 	// freopen("output.txt", "w", stdout);		//this out.
 	ios::sync_with_stdio(false);			//Not
 	cin.tie(NULL);							//this.
 	cout.tie(0);							//or this.
 
-	te();
+	// ll T;
+	// cin >> T;
+	// while(T--)
+		solve();
 
 	return 0;
 }
