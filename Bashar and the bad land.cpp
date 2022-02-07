@@ -24,16 +24,8 @@ void solve(){
 		// cout << l << ' ' << r << " " << t << "\n";
 		if(t >= x){
 			b = min(b, r - l + 1);
-			if(l == r){
-				t-=a[l];
-				l++;
-				r++;
-				t+=a[r];
-			}
-			else{
-				t-=a[l];
-				l++;
-			}
+			t-=a[l];
+			l++;
 			continue;
 		}
 		r++;
